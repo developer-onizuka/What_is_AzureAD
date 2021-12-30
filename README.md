@@ -7,6 +7,7 @@ AWS IAM can be classified as a tool in the "Cloud Access Management" category, w
 - Step2: Create IAM user instead of using the AWS root account, But it is not recommended to share among coworkers.
 - Step3: Create IAM policy which can access the services you want to use. 
 - Step4: Attach the IAM policy to the IAM user.
+
 For example, if you create a policy called "MyS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3.
 
 # 2. Azure Active Directory
