@@ -8,7 +8,13 @@ AWS IAM can be classified as a tool in the "Cloud Access Management" category, w
 - Step3: Create IAM policy which can access the services you want to use. 
 - Step4: Attach the IAM policy to the IAM user.
 
-For example, if you create a policy called "MyS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3.
+For example, if you create a policy called "MyS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. But this might not be secure because IAM user's access key and secret will be used in the EC2 instances. The secret of IAM user account might be used as minings.
+
+IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
+- Create the IAM role (role type should be "Amazon EC2 role")
+- Attach the access grant of "AmazonSESFullAccess" to it.
+- Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
+- Run the programs with AWS SES on the EC2 instance.
 
 # 2. Azure Active Directory
 
