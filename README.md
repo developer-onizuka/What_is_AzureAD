@@ -23,7 +23,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
   - (or you may use an existing Azure AD tenant like your organization's Office 365)
   - https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
     - Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.
-- Step2: Change or add additional domain names / Add users / Add groups and members
+- Step2: Change or add additional domain names / Add users / Add groups and members in the tenant
 - Step3: Get any subscriptions and attach a single Azure AD tenant to it when signing up for the subscription. (https://www.youtube.com/watch?v=-rudwyS1KNA)
 
 # 2-1. What is Subscription:
