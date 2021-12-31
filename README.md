@@ -19,23 +19,26 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 - Run the programs with AWS SES on the EC2 instance.
 
 # 2. Azure Active Directory
-- Step1: Create a new tenant (Azure AD's instance) in Azure Active Directory in Azure portal 
+- Step1: Create a new tenant which is an instance in Azure Active Directory at Azure portal console.
   - (or you may use an existing Azure AD tenant like your organization's Office 365)
   - https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
     - Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.
-- Step2: Change or add additional domain names / Add users / Add groups and members in the tenant
-
+- Step2: Change or add additional domain names / Add users / Add groups and members in the tenant, if you want.
 
 ```
 It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription.
 ```
 
 - Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
-- Step4: Attach a single Azure AD tenant to the subscription. (https://www.youtube.com/watch?v=-rudwyS1KNA)
+- Step4: Attach the subscription to a single Azure AD tenant. (https://www.youtube.com/watch?v=-rudwyS1KNA)
   - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions. You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
   - You must be a owner of the subscription if you are going to associate the subscription with a Azure AD tenant.
   - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod and Dev subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
-- Step5: 
+- Step5: Manage Role-Based Access Control (RBAC)
+  - Assign an RBAC role to a resouce (Virtual Machine or storage account)
+     - Top three RBAC roles are Owner, Contributer and Reader.
+  - Create a custom role if you can not find any suitable roles for your organization
+  - Determine who has access to a resource
 
 # 2-1. What is Subscription:
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
