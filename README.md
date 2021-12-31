@@ -24,7 +24,11 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
   - https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
     - Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.
 - Step2: Change or add additional domain names / Add users / Add groups and members in the tenant
-- Step3: Get any subscriptions and attach a single Azure AD tenant to it when signing up for the subscription so that you can create resources. (https://www.youtube.com/watch?v=-rudwyS1KNA)
+- Step3: Get a subscription which is in accordance with your purposes.
+- Step4: Attach a single Azure AD tenant to the subscription. (https://www.youtube.com/watch?v=-rudwyS1KNA)
+  - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions.
+  - You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
+- Step5: 
 
 # 2-1. What is Subscription:
 - https://www.youtube.com/watch?v=LMAC0IIYSJM
