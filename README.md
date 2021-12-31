@@ -32,8 +32,7 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
 
 - Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
 - Step4: Attach a single Azure AD tenant to the subscription. (https://www.youtube.com/watch?v=-rudwyS1KNA)
-  - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions.
-  - You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
+  - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions. You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
   - You must be a owner of the subscription if you are going to associate the subscription with a Azure AD tenant.
   - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod and Dev subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
 - Step5: 
