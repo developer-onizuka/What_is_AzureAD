@@ -19,6 +19,8 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 - Run the programs with AWS SES on the EC2 instance.
 
 # 2. Azure Active Directory
-
-
+- Step1: Create a new tenant in Azure Active Directory in Azure portal (or you can use an existing Azure AD tenant like your organization's Office 365)
+  https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
+  (Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.)
+- Step2: 
 
