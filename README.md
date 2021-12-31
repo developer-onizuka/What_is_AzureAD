@@ -25,7 +25,8 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
     - Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.
 - Step2: Change or add additional domain names / Add users / Add groups and members in the tenant
 
----
+
+-
 It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription 
 ---
 
