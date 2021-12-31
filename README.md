@@ -33,12 +33,18 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
 - Step4: Attach the subscription to a single Azure AD tenant. (https://www.youtube.com/watch?v=-rudwyS1KNA)
   - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions. You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
   - You must be a owner of the subscription if you are going to associate the subscription with a Azure AD tenant.
-  - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod and Dev subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
+  - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
 - Step5: Manage Role-Based Access Control (RBAC)
   - Assign an RBAC role to a resouce (Virtual Machine or storage account)
      - Top three RBAC roles are Owner, Contributer and Reader.
   - Create a custom role if you can not find any suitable roles for your organization
   - Determine who has access to a resource
+
+```
+Subscription is associated with Azure AD. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
+```
+
+- Step6: 
 
 # 2-1. What is Subscription:
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
