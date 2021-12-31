@@ -27,7 +27,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 
 
 ```
-It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription 
+It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription.
 ```
 
 - Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
