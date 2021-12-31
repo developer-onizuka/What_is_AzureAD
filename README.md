@@ -41,7 +41,7 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
   - Determine who has access to a resource
 
 ```
-Subscription is associated with Azure AD. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
+Subscription is associated with Azure AD. It manages compute and storage resources from the perspective of resource not user. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
 ```
 
 - Step6: 
