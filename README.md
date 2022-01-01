@@ -28,6 +28,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 - Step2: Change or add additional domain names / Add users / Add groups and members in the tenant, if you want.
   - https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 ```
+Tips:
 It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription.
 ```
 
@@ -43,6 +44,7 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
   - Determine who has access to a resource
 
 ```
+Tips:
 Subscription is associated with Azure AD. It manages compute and storage resources from the perspective of resource not user. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
 ```
 
