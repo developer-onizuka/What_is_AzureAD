@@ -52,7 +52,7 @@ Subscription is associated with Azure AD. It manages compute and storage resourc
 
 - Step6: Assign the role to {resource, resource group, subscription, management group} as a scope. (See also #2-3)
 
-# 2-1. What is Subscription:
+# 2-1. What is Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
 - https://www.youtube.com/watch?v=LMAC0IIYSJM
 
@@ -60,6 +60,6 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 Manage ID is a locally running internal endpoint which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint.
 - https://www.youtube.com/watch?v=sA_mXKy_dKU
 
-# 2-3. Scope:
+# 2-3. Scope
 When you assign roles, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
 - https://www.youtube.com/watch?v=4v7ffXxOnwU
