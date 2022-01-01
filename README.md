@@ -46,7 +46,7 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
 Subscription is associated with Azure AD. It manages compute and storage resources from the perspective of resource not user. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
 ```
 
-- Step6: Define a scope as a resource group. (See also #2-2)
+- Step6: Assign the role to resource group as a scope. (See also #2-2)
 
 # 2-1. What is Subscription:
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
