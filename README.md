@@ -50,6 +50,7 @@ But it costs money if you start to use a subscription.
 ```
 Tips:
 You might create the role which allows to access the blob storage in mystorageaccount20220103. 
+And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
 The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
 | Principal | Role | Scope |
