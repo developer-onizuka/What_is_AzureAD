@@ -49,7 +49,7 @@ But it costs money if you start to use a subscription.
      - https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
      - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 
-# 2-1. What is Subscription
+# 2-1. Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
 - https://www.youtube.com/watch?v=LMAC0IIYSJM
 
