@@ -48,6 +48,16 @@ But it costs money if you start to use a subscription.
   - You can also assign an RBAC role to a Managed ID which resides in virtual machine. (See also #2-2)
      - https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
      - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
+
+# 2-1. What is Subscription
+Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
+- https://www.youtube.com/watch?v=LMAC0IIYSJM
+
+# 2-2. Managed ID
+Manage ID is a locally running internal endpoint which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside. So, it is very secure.
+- https://www.youtube.com/watch?v=sA_mXKy_dKU
+- https://www.youtube.com/watch?v=vYUKC0mZFqI
+
 ```
 Tips:
 You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). 
@@ -58,16 +68,6 @@ See also #2-3 to understand what managed ID is.
 | user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
 | AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
-
-
-# 2-1. What is Subscription
-Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
-- https://www.youtube.com/watch?v=LMAC0IIYSJM
-
-# 2-2. Managed ID
-Manage ID is a locally running internal endpoint which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside. So, it is very secure.
-- https://www.youtube.com/watch?v=sA_mXKy_dKU
-- https://www.youtube.com/watch?v=vYUKC0mZFqI
 
 # 2-3. Scope
 When you assign roles, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
