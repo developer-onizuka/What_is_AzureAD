@@ -54,7 +54,7 @@ The application on the virtual machine attached the role thru managed ID can acc
 ```
 | Principal | Role | Scope |
 | --- | --- | --- |
-| StorageAccessForMyBlob | Storage Blob Data Contributor | mystorageaccount20220103 |
+| AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
 
 
 # 2-1. What is Subscription
