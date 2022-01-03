@@ -53,7 +53,7 @@ You might create the role which allows to access the blob storage in mystorageac
 And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
 The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
-| Principal | Role | Scope |
+| user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
 | AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
 
