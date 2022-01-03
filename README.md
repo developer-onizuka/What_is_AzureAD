@@ -41,16 +41,15 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
   - Assign an RBAC role to a Azure AD user to control Virtual Machine or storage account.
      - Top three RBAC roles are Owner, Contributer and Reader.
   - You can also assign an RBAC role to a Managed ID which resides in virtual machine. (See also #2-2)
-     - https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-managed-identity
-  - Create a custom role if you can not find any suitable roles for your organization
-  - Determine who has access to a resource
-
+     - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 ```
 Tips:
-Subscription is associated with Azure AD. It manages compute and storage resources from the perspective of resource not user. So, You need to manage subscription itself in addition to Azure AD's management such as user and RBAC.
+You might create the role which allows to access the blob storage in mystorageaccount20220103. The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
+    | Principal | Role | Scope |
+    | --- | --- | --- |
+    | StorageAccessForMyBlob | Storage Blob Data Contributor | mystorageaccount20220103 |
 
-- Step6: Assign the role to {resource, resource group, subscription, management group} as a scope. (See also #2-3)
 
 # 2-1. What is Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
@@ -59,6 +58,7 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 # 2-2. Managed ID
 Manage ID is a locally running internal endpoint which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside. So, it is very secure.
 - https://www.youtube.com/watch?v=sA_mXKy_dKU
+- https://www.youtube.com/watch?v=vYUKC0mZFqI
 
 # 2-3. Scope
 When you assign roles, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
