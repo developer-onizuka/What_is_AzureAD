@@ -49,9 +49,9 @@ But it costs money if you start to use a subscription.
      - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 ```
 Tips:
-You might create the role which allows to access the blob storage in mystorageaccount20220103. 
+You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). 
 And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
-The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
+The application on the source azure resource such as virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
 | user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
