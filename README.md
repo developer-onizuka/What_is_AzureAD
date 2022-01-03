@@ -29,7 +29,8 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
   - https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 ```
 Tips:
-It's Free up to this point if you use Azure Free Edition. But it costs money if you start to use a subscription.
+It's Free up to this point if you use Azure Free Edition. 
+But it costs money if you start to use a subscription.
 ```
 
 - Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
@@ -44,7 +45,8 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
      - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 ```
 Tips:
-You might create the role which allows to access the blob storage in mystorageaccount20220103. The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
+You might create the role which allows to access the blob storage in mystorageaccount20220103. 
+The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
 | Principal | Role | Scope |
 | --- | --- | --- |
