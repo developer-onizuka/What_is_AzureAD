@@ -46,9 +46,9 @@ It's Free up to this point if you use Azure Free Edition. But it costs money if 
 Tips:
 You might create the role which allows to access the blob storage in mystorageaccount20220103. The application on the virtual machine attached the role thru managed ID can access to the blob. See also #2-3.
 ```
-    | Principal | Role | Scope |
-    | --- | --- | --- |
-    | StorageAccessForMyBlob | Storage Blob Data Contributor | mystorageaccount20220103 |
+| Principal | Role | Scope |
+| --- | --- | --- |
+| StorageAccessForMyBlob | Storage Blob Data Contributor | mystorageaccount20220103 |
 
 
 # 2-1. What is Subscription
