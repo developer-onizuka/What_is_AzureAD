@@ -69,7 +69,9 @@ See also #2-3 to understand what managed ID is.
 | --- | --- | --- |
 | AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
 
-- Get a token by using C#
+
+Get a token by using C#
+---
 ```
 using System;
 using System.Collections.Generic;
