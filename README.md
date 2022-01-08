@@ -63,7 +63,6 @@ Tips:
 You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). 
 And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
 The application on the source azure resource such as virtual machine attached the role thru managed ID can access to the blob.
-See also #2-3 to understand what managed ID is.
 ```
 | user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
