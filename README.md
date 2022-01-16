@@ -11,13 +11,13 @@ The goal of this video above is the table below:
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
 
-> CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
-> CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
-> Vipin and Deepak are managed in the Account of 36989xxxxxxx.
-> Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
-> In addition to the policy above, AssumeRoles which allow them to use AWS STS (Security Token Service) is necessary when Vipin and Deepak switch each role above.
-> Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
-> "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
+- CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
+- CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
+- Vipin and Deepak are managed in the Account of 36989xxxxxxx.
+- Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
+- In addition to the policy above, AssumeRoles which allow them to use AWS STS (Security Token Service) is necessary when Vipin and Deepak switch each role above.
+- Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
+- "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
 ```
 {
   "Verision": "2012-10-17",
