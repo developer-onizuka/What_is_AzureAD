@@ -50,12 +50,12 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 
 # 2. Azure Active Directory
 - Step1: Create a new tenant which is an instance in Azure Active Directory at Azure portal console.
-  - https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
+  > https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
     - Please note when you create a new Azure AD tenant, you become the first user of that tenant. As the first user, you're automatically assigned the Global Admin role.
   - You may use an existing Azure AD tenant like your organization's Office 365 instead of creating it.
 
 - Step2: Change or add additional domain names / Add users / Add groups and members in the tenant, if you want.
-  - https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
+  > https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview
 ```
 Tips:
 It's Free up to this point if you use Azure Free Edition. 
@@ -65,7 +65,7 @@ But it costs money if you start to use a subscription.
 - Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
 
 - Step4: Attach the subscription to a single Azure AD tenant. 
-  - https://www.youtube.com/watch?v=-rudwyS1KNA
+  > https://www.youtube.com/watch?v=-rudwyS1KNA
   - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions. You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
   - You must be a owner of the subscription if you are going to associate the subscription with a Azure AD tenant.
   - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
@@ -79,12 +79,12 @@ But it costs money if you start to use a subscription.
 
 # 2-1. Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
-- https://www.youtube.com/watch?v=LMAC0IIYSJM
+> https://www.youtube.com/watch?v=LMAC0IIYSJM
 
 # 2-2. Managed ID
 Manage ID is a locally running internal endpoint (http://169.254.169.254/metadata/identity/oauth2/token) which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside because platform manages the credentials. So, it is very secure.
-- https://www.youtube.com/watch?v=sA_mXKy_dKU
-- https://www.youtube.com/watch?v=vYUKC0mZFqI
+> https://www.youtube.com/watch?v=sA_mXKy_dKU
+> https://www.youtube.com/watch?v=vYUKC0mZFqI
 
 ```
 Tips:
@@ -132,4 +132,4 @@ See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identit
 
 # 2-3. Scope
 When you assign roles, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
-- https://www.youtube.com/watch?v=4v7ffXxOnwU
+> https://www.youtube.com/watch?v=4v7ffXxOnwU
