@@ -7,7 +7,7 @@
 
 The goal of the video above is the table below:
 | User in the AWS account 36989xxxxxxx | Prod (AWS account: 46017xxxxxxx) | Dev (AWS account: 39355xxxxxxx) |
-| --- | --- | --- |
+| ---: | --- | --- |
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
 
