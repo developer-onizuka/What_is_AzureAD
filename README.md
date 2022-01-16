@@ -27,6 +27,7 @@ The goal of this video above is the table below:
       "Principal": {
         "AWS": "arn:aws:iam::36989xxxxxxx:root" --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
       },
+...
 ``` 
 
 In Azure, on the other hand, it's the Azure Active Directory that manages users, so you need to associate a subscription with it (you don't need to get a separate subscription to manage users). 
