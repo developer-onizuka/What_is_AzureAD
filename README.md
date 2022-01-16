@@ -3,7 +3,7 @@
  AWS IAM can be classified as a tool in the "Cloud Access Management" category, while Azure Active Directory is grouped under "Password Management".
  
  For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
- - https://www.youtube.com/watch?v=d7R08uPS98M
+ > https://www.youtube.com/watch?v=d7R08uPS98M
 
 The goal of this video above is the table below:
 | User <br>(AWS account: 36989xxxxxxx) | Prod <br>(AWS account: 46017xxxxxxx) | Dev <br>(AWS account: 39355xxxxxxx) |
@@ -11,13 +11,13 @@ The goal of this video above is the table below:
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
 
-- CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
-- CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
-- Vipin and Deepak are managed in the Account of 36989xxxxxxx.
-- Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
-- In addition to the policy above, AssumeRoles which allow them to use AWS STS (Security Token Service) is necessary when Vipin and Deepak switch each role above.
-- Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
-- "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
+> CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
+> CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
+> Vipin and Deepak are managed in the Account of 36989xxxxxxx.
+> Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
+> In addition to the policy above, AssumeRoles which allow them to use AWS STS (Security Token Service) is necessary when Vipin and Deepak switch each role above.
+> Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
+> "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
 ```
 {
   "Verision": "2012-10-17",
