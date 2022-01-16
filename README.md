@@ -11,8 +11,8 @@ The goal of the video above is the table below:
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
 
-- CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Emvironment.
-- CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Emvironment.
+- CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
+- CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
 - Vipin and Deepak are managed in the Account of 36989xxxxxxx.
 - Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
 - In addition to the policy above, AssumeRoles is necessary for using AWS STS (Security Token Service) when Vipin and Deepak switch the role in the Account of 36989xxxxxxx.
