@@ -5,6 +5,29 @@
  For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
 - https://www.youtube.com/watch?v=d7R08uPS98M
 
+|  | Prod (46017xxxxxxx) | Dev (39355xxxxxxx) |
+| --- | --- | --- |
+| Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
+| Deepak | - | CrossAccount-AppsDevs |
+
+- CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Emvironment.
+- CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Emvironment.
+- Vipin and Deepak are managed in the Account of 36989xxxxxxx.
+- Vipin and Deepak are in the group AppsTeam whose policy is ReadonlyAccess.
+- In addition to the policy above, AssumeRoles is necessary for using AWS STS (Security Token Service) when Vipin and Deepak switch the role in the Account of 36989xxxxxxx.
+- Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
+- "arn:aws:iam::36989xxxxxxx:root" means all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin". 
+```
+{
+  "Verision": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::36989xxxxxxx:root" --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
+      },
+``` 
+
 In Azure, on the other hand, it's the Azure Active Directory that manages users, so you need to associate a subscription with it (you don't need to get a separate subscription to manage users). 
  
 Yes, Azure AD remains if subscription expires.
