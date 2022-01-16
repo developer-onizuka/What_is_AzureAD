@@ -74,8 +74,8 @@ But it costs money if you start to use a subscription.
   - Assign an RBAC role to a Azure AD user to control Virtual Machine or storage account.
      - Top three RBAC roles are Owner, Contributer and Reader.
   - You can also assign an RBAC role to a Managed ID which resides in virtual machine. (See also #2-2)
-     - https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
-     - https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
+     > https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
+     > https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 
 # 2-1. Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
