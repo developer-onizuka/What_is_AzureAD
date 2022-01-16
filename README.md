@@ -6,8 +6,8 @@
 - https://www.youtube.com/watch?v=d7R08uPS98M
 
 The goal of this video above is the table below:
-| User <br> AWS account 36989xxxxxxx | Prod (AWS account: 46017xxxxxxx) | Dev (AWS account: 39355xxxxxxx) |
-| ---: | :---: | :---: |
+| User <br>(AWS account: 36989xxxxxxx) | Prod <br>(AWS account: 46017xxxxxxx) | Dev <br>(AWS account: 39355xxxxxxx) |
+| :---: | :---: | :---: |
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
 
