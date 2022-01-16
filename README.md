@@ -5,7 +5,7 @@
  For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
 - https://www.youtube.com/watch?v=d7R08uPS98M
 
-|  | Prod (46017xxxxxxx) | Dev (39355xxxxxxx) |
+|  | Prod (AWS account ID: 46017xxxxxxx) | Dev (AWS account ID: 39355xxxxxxx) |
 | --- | --- | --- |
 | Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
 | Deepak | - | CrossAccount-AppsDevs |
