@@ -34,6 +34,8 @@ The goal of this video above is the table below:
  
 Yes, Azure AD remains if subscription expires.
 
+The followings are steps to attach policys to each user and role in AWS and Azure based on each clould's way of thinking.
+
 # 1. AWS IAM
 - Step1: Geting AWS account (root user), But it is not recommended to use at creating AWS resouces.
 - Step2: Create IAM user instead of using the AWS root account, But it is not recommended to share among coworkers.
