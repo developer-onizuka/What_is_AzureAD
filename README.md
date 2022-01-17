@@ -20,7 +20,7 @@ The goal of this video above is the table below:
 - "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
 ```
 {
-  "Verision": "2012-10-17",
+  "Version": "2012-10-17",
   "Statement": [
     {
       "Effect": "Allow",
