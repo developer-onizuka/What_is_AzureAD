@@ -70,7 +70,7 @@ But it costs money if you start to use a subscription.
   > https://www.youtube.com/watch?v=-rudwyS1KNA
   - You can not make any resources such as storage accounts on the Azure AD tenant if you don't associate Azure AD tenant with some specific subscriptions. You might find messages like "You are currently signed into the xxx directory which does not have any subscriptions."
   - You must be a owner of the subscription if you are going to associate the subscription with a Azure AD tenant.
-  - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with a Azure AD tenant. It is convienent to manage security roles and billings.
+  - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with an Azure AD tenant. It is convienent to manage security roles and billings.
 
 - Step5: Manage Role-Based Access Control (RBAC)
   - Assign an RBAC role to a Azure AD user to control Virtual Machine or storage account.
