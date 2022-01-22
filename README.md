@@ -101,7 +101,7 @@ Manage ID is a locally running internal endpoint (http://169.254.169.254/metadat
 Tips:
 You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). 
 And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
-The application on the source of azure resource such as virtual machine attached the role thru managed ID can access to the blob which is a target of application on the virtual machine.
+The source application on the azure resource such as virtual machine attached the role thru managed ID can access to the blob which is a target of application on the virtual machine.
 ```
 | user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
