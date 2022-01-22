@@ -156,3 +156,5 @@ The main difference between Service principal and Managed identity is:
 > https://thecloudhub.com/2019/03/22/whats-an-azure-service-principal-and-managed-identity/
 
 > https://azuread.net/archives/9397
+
+![azure-ad2.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad2.jpg)
