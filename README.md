@@ -86,7 +86,12 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 
 ![azure-ad.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad.jpg)
 
-# 2-2. Managed ID
+# 2-2. Security principal, Scope
+- Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
+- When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
+> https://www.youtube.com/watch?v=4v7ffXxOnwU
+
+# 2-3. Managed ID
 Manage ID is a locally running internal endpoint (http://169.254.169.254/metadata/identity/oauth2/token) which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside because platform manages the credentials. So, it is very secure.
 > https://www.youtube.com/watch?v=sA_mXKy_dKU
 > https://www.youtube.com/watch?v=vYUKC0mZFqI
@@ -135,8 +140,10 @@ catch (Exception e)
 ```
 See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
 
-# 2-3. Security principal, Scope
-- Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
-> Service principal: https://www.youtube.com/watch?v=Hg-YsUITnck
-- When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
-> https://www.youtube.com/watch?v=4v7ffXxOnwU
+# 2-4. Service principal
+> https://www.youtube.com/watch?v=Hg-YsUITnck
+
+It is very similar to Managed Id. But the main difference between Service principal and Managed identity is:
+- You don’t need to specify any credentials in your code if you use managed identity. 
+- But you need to specify application id, client id, etc to generate a token to access any Azure resource if you use service principle. 
+- Ideally, you should opt for service principal only if the service you use doesn’t support managed identity.
