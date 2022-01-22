@@ -6,10 +6,10 @@
  > https://www.youtube.com/watch?v=d7R08uPS98M
 
 The goal of this video above is the table below:
-| User <br>(AWS account: 36989xxxxxxx) | Prod <br>(AWS account: 46017xxxxxxx) | Dev <br>(AWS account: 39355xxxxxxx) |
+| UserManagement <br>(AWS account: 36989xxxxxxx) | Prod <br>(AWS account: 46017xxxxxxx) | Dev <br>(AWS account: 39355xxxxxxx) |
 | :---: | :---: | :---: |
-| Vipin | CrossAccount-AppsProds | CrossAccount-AppsDevs |
-| Deepak | - | CrossAccount-AppsDevs |
+| Vipin <br> (user) | CrossAccount-AppsProds <br> (role) | CrossAccount-AppsDevs <br> (role) |
+| Deepak <br> (role) | - | CrossAccount-AppsDevs <br> (role) |
 
 - CrossAccount-AppsProds: Full Access to EC2 and S3 in Product Environment.
 - CrossAccount-AppsDevs: Full Access to EC2 and S3 in Develop Environment.
