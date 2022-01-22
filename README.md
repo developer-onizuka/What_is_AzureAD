@@ -142,9 +142,14 @@ catch (Exception e)
 See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
 
 # 2-4. Service principal
-> https://www.youtube.com/watch?v=Hg-YsUITnck
+Service principals help us avoid having to create fake users in Active Directory in order to manage authentication when we need to access Azure resources. But it is very similar to Managed Id. 
 
-It is very similar to Managed Id. But the main difference between Service principal and Managed identity is:
+The main difference between Service principal and Managed identity is:
 - You don’t need to specify any credentials in your code if you use managed identity. 
 - But you need to specify application id, client id, etc to generate a token to access any Azure resource if you use service principal. 
 - Ideally, you should opt for service principal only if the service you use doesn’t support managed identity.
+- Managed identity manages the creation and automatic renewal of service principal on your behalf.
+
+> https://www.youtube.com/watch?v=Hg-YsUITnck
+
+> https://thecloudhub.com/2019/03/22/whats-an-azure-service-principal-and-managed-identity/
