@@ -73,9 +73,9 @@ But it costs money if you start to use a subscription.
   - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with an Azure AD tenant. It is convienent to manage security roles and billings.
 
 - Step5: Manage Role-Based Access Control (RBAC)
-  - Assign an RBAC role to an Azure AD user to control Virtual Machine or storage account.
+  - Assign an RBAC role to an Azure AD user to control Virtual Machine or storage account. (See also #2-2)
      - Top three RBAC roles are Owner, Contributer and Reader.
-  - You can also assign an RBAC role to a Managed ID which resides in virtual machine. (See also #2-2)
+  - You can also assign an RBAC role to Managed ID which resides in virtual machine or Service principal. (See also #2-3 and #2-4)
      > https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
      
      > https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
@@ -86,7 +86,7 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 
 ![azure-ad.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad.jpg)
 
-# 2-2. Security principal, Scope
+# 2-2. Role, Security principal and Scope
 - Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
 - When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
 > https://www.youtube.com/watch?v=4v7ffXxOnwU
