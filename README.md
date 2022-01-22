@@ -145,7 +145,7 @@ See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identit
 Service principals help us avoid having to create fake users in Active Directory in order to manage authentication when we need to access Azure resources. But it is very similar to Managed Id. 
 
 The main difference between Service principal and Managed identity is:
-- You don’t need to expose any credentials in your code if you use managed identity which manages the creation and automatic renewal of service principal on your behalf.
+- You don’t need to expose any credentials in your code if you use "Managed Id" which manages the creation and automatic renewal of service principal on your behalf.
 - But in service principal, you need to expose application id and secret id in your code to let Azure AD generate a token so that your code can access any Azure resource. 
 - Exposing the application id (same as client id) and secret id makes some security issues, so you don't push your code directry into github.
 - Ideally, you should opt for service principal only if the service you use doesn’t support managed identity.
