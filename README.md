@@ -135,6 +135,7 @@ catch (Exception e)
 ```
 See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
 
-# 2-3. Scope
-When you assign roles, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
+# 2-3. Security principal, Scope
+- Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
+- When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
 > https://www.youtube.com/watch?v=4v7ffXxOnwU
