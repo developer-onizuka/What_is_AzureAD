@@ -137,5 +137,6 @@ See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identit
 
 # 2-3. Security principal, Scope
 - Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
+> Service principal: https://www.youtube.com/watch?v=Hg-YsUITnck
 - When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
 > https://www.youtube.com/watch?v=4v7ffXxOnwU
