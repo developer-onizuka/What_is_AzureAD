@@ -42,7 +42,7 @@ The followings are steps to attach policys to each user and role in AWS and Azur
 - Step3: Create IAM policy which can access the services you want to use. 
 - Step4: Attach the IAM policy to the IAM user.
 
-For example, if you create a policy called "MyS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. But this might not be secure because IAM user's access key and secret will be used in the EC2 instances. The secret of IAM user account might be used as minings.
+For example, if you create a policy called "AmazonS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. But this might not be secure because IAM user's access key and secret will be used in the EC2 instances, if the access key has another grants besides S3FullAccess such as "ec2:RunInstances". The secret of IAM user account might be used as minings.
 
 IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
 - Create the IAM role (role type should be "Amazon EC2 role")
