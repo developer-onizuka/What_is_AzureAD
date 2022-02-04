@@ -50,6 +50,11 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
 - Run the programs with AWS SES on the EC2 instance.
 
+|  | Possibility of leaking | Impact |
+| :--- | :--- | :--- |
+| IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
+| IAM role | No | - |
+
 # 2. Azure Active Directory
 - Step1: Create a new tenant which is an instance in Azure Active Directory at Azure portal console.
   > https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-access-create-new-tenant
