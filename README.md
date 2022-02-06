@@ -151,8 +151,8 @@ See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identit
 
 | | System-assigned | User-assigned |
 | --- | --- | --- |
-| Key : Resouce | 1 : 1 | 1 : N |
-| ID's behavior at deleting Resouce | gone | remain |
+| ID : Resource | 1 : 1 | 1 : N |
+| ID's behavior at deleting Resource | gone | remain |
 | How to use properly | for Small systems | for Large systems |  
 
 
