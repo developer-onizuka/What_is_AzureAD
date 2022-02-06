@@ -121,12 +121,6 @@ Manage ID is a locally running internal endpoint (http://169.254.169.254/metadat
 
 ![azure-ManagedID.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ManagedID.png)
 
-> https://www.youtube.com/watch?v=sA_mXKy_dKU
-> 
-> https://www.youtube.com/watch?v=vYUKC0mZFqI
->
-> https://www.christofvg.be/2020/05/01/Manage-Azure-Resource-Manager-using-a-Managed-Identity/
-
 
 Tips:
 ---
@@ -136,6 +130,11 @@ You might create the role which allows to access the blob storage in mystorageac
 | --- | --- | --- |
 | AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
 
+> https://www.youtube.com/watch?v=sA_mXKy_dKU
+> 
+> https://www.youtube.com/watch?v=vYUKC0mZFqI
+>
+> https://www.christofvg.be/2020/05/01/Manage-Azure-Resource-Manager-using-a-Managed-Identity/
 
 Get a token by using C#
 ---
