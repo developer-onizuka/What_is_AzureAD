@@ -94,8 +94,11 @@ But it costs money if you start to use a subscription.
      - Top three RBAC roles are Owner, Contributer and Reader.
   - You can also assign an RBAC role to Managed ID which resides in virtual machine or Service principal. (See also [#2-3](https://github.com/developer-onizuka/What_is_AzureAD#2-3-managed-id) and [#2-4](https://github.com/developer-onizuka/What_is_AzureAD#2-4-service-principal))
      > https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
-     
+     > 
      > https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
+
+But as you understand IAM role in AWS, it it similar that you can't use Managed ID on your onprem resources to access from outside of Azure, because only Azure  instance can have a provider that manages the temporary security credentials transparently. If you have to access from outside, you might use [SAS-token](https://github.com/developer-onizuka/azureBlob#6-download-test-file-to-upload-and-upload-it-to-the-blob) in Azure Storage Account instead of Azure Storage Account's Access key.
+---
 
 # 2-1. Subscription
 Subscription is a logical container that Microsoft uses to maintain their billing relationship with the Azure users. The billing relationship starts and stops at the subscription boundary.
