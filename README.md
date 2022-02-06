@@ -27,7 +27,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 |  | Possibility of leaking | Impact |
 | :--- | :--- | :--- |
 | IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
-| IAM role | No | -<br> (But you can't use IAM role on your onprem resources to access from outside of AWS, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently. The only way to access from outside is to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly.) |
+| IAM role | No | -<br> (But you can't use IAM role on your onprem resources to access from outside of AWS, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently (See also #1-1). The only way to access from outside is to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly. See also #1-2 about Switch role) |
 
 # 1-1. How to retrieve security credentials from EC2 instance
 ![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
@@ -36,7 +36,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 >
 > https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
 
-# 1-2. Switch Role
+# 1-2. Switch role
 In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
  > https://www.youtube.com/watch?v=d7R08uPS98M
  > 
