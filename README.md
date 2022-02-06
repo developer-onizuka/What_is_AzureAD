@@ -127,12 +127,11 @@ Manage ID is a locally running internal endpoint (http://169.254.169.254/metadat
 >
 > https://www.christofvg.be/2020/05/01/Manage-Azure-Resource-Manager-using-a-Managed-Identity/
 
-```
+
 Tips:
-You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). 
-And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity".
-The source application on the azure resource such as virtual machine attached the role thru managed ID can access to the blob which is a target of application on the virtual machine.
-```
+---
+You might create the role which allows to access the blob storage in mystorageaccount20220103 (target azure resource). And attach the role to user-assigned Managed ID you already created in the service of "Managed Identity". The source application on the azure resource such as virtual machine attached the role thru managed ID can access to the blob which is a target of application on the virtual machine.
+
 | user-assigned Managed ID | Role | Scope |
 | --- | --- | --- |
 | AzDemoUA | Storage Blob Data Contributor | mystorageaccount20220103 |
