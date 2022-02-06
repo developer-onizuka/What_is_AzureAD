@@ -27,7 +27,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 |  | Possibility of leaking | Impact |
 | :--- | :--- | :--- |
 | IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
-| IAM role | No | -<br> (But you can't use IAM role on your onprem resources to access from outside of AWS, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently (See also [#1-1](https://github.com/developer-onizuka/What_is_AzureAD#1-1-how-to-retrieve-security-credentials-from-ec2-instance)). The only way to access from outside is to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly. See also [#1-2](https://github.com/developer-onizuka/What_is_AzureAD#1-2-switch-role) about Switch role.) |
+| IAM role | No | -<br> (But you can't use IAM role on your onprem servers to access AWS resources, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently (See also [#1-1](https://github.com/developer-onizuka/What_is_AzureAD#1-1-how-to-retrieve-security-credentials-from-ec2-instance)). The only way to access from outside is to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly. See also [#1-2](https://github.com/developer-onizuka/What_is_AzureAD#1-2-switch-role) about Switch role.) |
 
 # 1-1. How to retrieve security credentials from EC2 instance
 ![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
@@ -94,7 +94,7 @@ The goal of this video above is the table below:
 
 Tips:
 ---
-But as you understand IAM role in AWS, it it similar that you can't use Managed ID on your onprem resources to access from outside of Azure, because only Azure  instance can have a provider that manages the temporary security credentials transparently. 
+But as you understand IAM role in AWS, it it similar that you can't use Managed ID on your onprem servers to access Azure resources, because only Azure  instance can have a provider that manages the temporary security credentials transparently. 
 If you have to access from outside, you might use [SAS-token](https://github.com/developer-onizuka/azureBlob#6-download-test-file-to-upload-and-upload-it-to-the-blob) in Azure Storage Account instead of Azure Storage Account's Access key.
 
 # 2-1. Subscription
