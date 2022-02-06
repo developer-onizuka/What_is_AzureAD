@@ -81,7 +81,7 @@ It's Free up to this point if you use Azure Free Edition.
 But it costs money if you start to use a subscription.
 ```
 
-- Step3: Get a subscription which is in accordance with your purposes. (See also #2-1)
+- Step3: Get a subscription which is in accordance with your purposes. (See also [#2-1](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/README.md#2-1-subscription))
 
 - Step4: Attach the subscription to a single Azure AD tenant. 
   > https://www.youtube.com/watch?v=-rudwyS1KNA
