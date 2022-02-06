@@ -90,7 +90,7 @@ But it costs money if you start to use a subscription.
   - One Azure AD tenant can be associated with sevral subscriptions. Example, Prod/Dev subscriptions and IT/HR subscriptions can be associated with an Azure AD tenant. It is convienent to manage security roles and billings.
 
 - Step5: Manage Role-Based Access Control (RBAC)
-  - Assign an RBAC role to an Azure AD user to control Virtual Machine or storage account. (See also #2-2)
+  - Assign an RBAC role to an Azure AD user to control Virtual Machine or storage account. (See also [#2-2](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/README.md#2-2-role-security-principal-and-scope))
      - Top three RBAC roles are Owner, Contributer and Reader.
   - You can also assign an RBAC role to Managed ID which resides in virtual machine or Service principal. (See also [#2-3](https://github.com/developer-onizuka/What_is_AzureAD#2-3-managed-id) and [#2-4](https://github.com/developer-onizuka/What_is_AzureAD#2-4-service-principal))
      > https://docs.microsoft.com/en-us/learn/modules/implement-managed-identities/
