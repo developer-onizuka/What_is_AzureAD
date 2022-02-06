@@ -146,6 +146,16 @@ catch (Exception e)
 ```
 See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
 
+
+# 2-3-1. Difference between System-assigned and User-assigned Managed ID
+
+| | System-assigned | User-assigned |
+| --- | --- | --- |
+| Key : Resouce | 1 : 1 | 1 : N |
+| ID's behavior at deleting Resouce | gone | remain |
+| How to use properly | for Small systems | for Large systems |  
+
+
 # 2-4. Service principal
 Service principals help us avoid having to create fake users in Active Directory in order to manage authentication when we need to access Azure resources. But it is very similar to Managed Id. 
 
