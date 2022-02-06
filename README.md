@@ -59,7 +59,7 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 ![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
 
 > https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#instance-metadata-security-credentials
-
+>
 > https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
 
 # 2. Azure Active Directory
@@ -105,6 +105,9 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 
 # 2-3. Managed ID
 Manage ID is a locally running internal endpoint (http://169.254.169.254/metadata/identity/oauth2/token) which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. Your code just send a token request with no credentials to this endpoint. The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside because platform manages the credentials. So, it is very secure.
+
+![azure-ManagedID.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ManagedID.png)
+
 > https://www.youtube.com/watch?v=sA_mXKy_dKU
 > 
 > https://www.youtube.com/watch?v=vYUKC0mZFqI
