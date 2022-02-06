@@ -106,7 +106,7 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 # 2-2. Role, Security principal and Scope
 - Security principal is an Azure object (identity) that can be assigned to a role (ex; user, groups, service principal and managed id) 
 
-![security-principal.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/secrity-principal.png)
+![security-principal.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/security-principal.png)
 
 - When you assign roles to security principal, you must specify a scope. Scope is the set of resources the access applies to. ie, It is a definition of "where it can be done?".
 
