@@ -124,6 +124,8 @@ Manage ID is a locally running internal endpoint (http://169.254.169.254/metadat
 > https://www.youtube.com/watch?v=sA_mXKy_dKU
 > 
 > https://www.youtube.com/watch?v=vYUKC0mZFqI
+>
+> https://www.christofvg.be/2020/05/01/Manage-Azure-Resource-Manager-using-a-Managed-Identity/
 
 ```
 Tips:
