@@ -2,7 +2,42 @@
 
  AWS IAM can be classified as a tool in the "Cloud Access Management" category, while Azure Active Directory is grouped under "Password Management".
  
- For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
+ For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. 
+
+ In Azure, on the other hand, it's the Azure Active Directory that manages users, so you need to associate a subscription with it (you don't need to get a separate subscription to manage users). 
+ 
+Yes, Azure AD remains if subscription expires.
+
+The followings are steps to attach policys to each user and role in AWS and Azure based on each clould's way of thinking.
+---
+# 1. AWS IAM
+- Step1: Geting AWS account (root user), But it is not recommended to use at creating AWS resouces.
+- Step2: Create IAM user instead of using the AWS root account, But it is not recommended to share among coworkers.
+- Step3: Create IAM policy which can access the services you want to use. 
+- Step4: Attach the IAM policy to the IAM user.
+
+For example, if you create a policy called "AmazonS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. But this might not be secure because IAM user's access key and secret will be used in the EC2 instances, if the access key has another grants such as "ec2:RunInstances" besides S3FullAccess. The secret of IAM user account might be used as minings.
+
+IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
+- Create the IAM role (role type should be "Amazon EC2 role")
+- Attach the access grant of "AmazonSESFullAccess" to it.
+- Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
+- Run the programs with AWS SES on the EC2 instance. (See also #1-1 about how IAM role works inside of EC2 instance.)
+
+|  | Possibility of leaking | Impact |
+| :--- | :--- | :--- |
+| IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
+| IAM role | No | - (But you can't use IAM role to access from outside of AWS, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently. The only way to access from outside is to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly.) |
+
+# 1-1. How to retrieve security credentials from EC2 instance
+![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
+
+> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#instance-metadata-security-credentials
+>
+> https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
+
+# 1-2. Switch Role
+In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
  > https://www.youtube.com/watch?v=d7R08uPS98M
  > 
  > https://iselegant.hatenablog.com/entry/2020/05/24/215808
@@ -31,38 +66,6 @@ The goal of this video above is the table below:
       },
 ...
 ``` 
-
- In Azure, on the other hand, it's the Azure Active Directory that manages users, so you need to associate a subscription with it (you don't need to get a separate subscription to manage users). 
- 
-Yes, Azure AD remains if subscription expires.
-
-The followings are steps to attach policys to each user and role in AWS and Azure based on each clould's way of thinking.
----
-# 1. AWS IAM
-- Step1: Geting AWS account (root user), But it is not recommended to use at creating AWS resouces.
-- Step2: Create IAM user instead of using the AWS root account, But it is not recommended to share among coworkers.
-- Step3: Create IAM policy which can access the services you want to use. 
-- Step4: Attach the IAM policy to the IAM user.
-
-For example, if you create a policy called "AmazonS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. But this might not be secure because IAM user's access key and secret will be used in the EC2 instances, if the access key has another grants such as "ec2:RunInstances" besides S3FullAccess. The secret of IAM user account might be used as minings.
-
-IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
-- Create the IAM role (role type should be "Amazon EC2 role")
-- Attach the access grant of "AmazonSESFullAccess" to it.
-- Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
-- Run the programs with AWS SES on the EC2 instance. (See also #1-1 about how IAM role works inside of EC2 instance.)
-
-|  | Possibility of leaking | Impact |
-| :--- | :--- | :--- |
-| IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
-| IAM role | No | - |
-
-# 1-1. How to retrieve security credentials from EC2 instance
-![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
-
-> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#instance-metadata-security-credentials
->
-> https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
 
 # 2. Azure Active Directory
 - Step1: Create a new tenant which is an instance in Azure Active Directory at Azure portal console.
