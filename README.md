@@ -98,8 +98,10 @@ But it costs money if you start to use a subscription.
      > https://docs.microsoft.com/en-us/learn/modules/authenticate-apps-with-managed-identities/
 
 ```
-But as you understand IAM role in AWS, it it similar that you can't use Managed ID on your onprem resources to access from outside
-of Azure, because only Azure  instance can have a provider that manages the temporary security credentials transparently. 
+Tips:
+But as you understand IAM role in AWS, it it similar that you can't use Managed ID on your onprem resources to access from 
+outside of Azure, because only Azure  instance can have a provider that manages the temporary security credentials 
+transparently. 
 If you have to access from outside, you might use [SAS-token](https://github.com/developer-onizuka/azureBlob#6-download-test-file-to-upload-and-upload-it-to-the-blob) in Azure Storage Account instead 
 of Azure Storage Account's Access key.
 ```
