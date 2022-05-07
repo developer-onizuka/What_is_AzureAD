@@ -181,7 +181,7 @@ See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identit
 
 # 2-4. Service principal
 Unfortunately, managed ID does not support on-premises applications or services. 
-Service principals help us avoid to use each secret in Azure when we need to access Azure resources. But it is very similar to Managed Id. 
+Service principals help us avoid to use each secret when we need to access Azure resources. But it is very similar to Managed Id. 
 
 The main difference between Service principal and Managed identity is:
 - You don’t need to expose any credentials in your code if you use "Managed identity" which manages the creation and automatic renewal of service principal on your behalf.
