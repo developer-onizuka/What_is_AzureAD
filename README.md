@@ -195,6 +195,12 @@ So, You use these manual processes in only two scenarios:
 
 The most secure and convenient way to handle authentication within Azure is to use managed identities.
 
+> https://github.com/developer-onizuka/OAuth2.0_Authorization
+
+![azure-ad2.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad2.jpg)
+
+
+# Refferences:
 > https://tech-blog.cloud-config.jp/2020-08-24-azure-authentication-tools/
 
 > https://www.youtube.com/watch?v=7I1eQ_2SjJY
@@ -203,4 +209,4 @@ The most secure and convenient way to handle authentication within Azure is to u
 
 > https://azuread.net/archives/9397
 
-![azure-ad2.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad2.jpg)
+
