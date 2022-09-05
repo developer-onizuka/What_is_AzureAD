@@ -35,7 +35,9 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 > https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#instance-metadata-security-credentials
 >
 > https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
+<br>
 
+You can retrieve some secrets directly from metadata service in your EC2 instance.
 ```
 $ curl http://169.254.169.254/latest/iam/security-credentials/<Your own IAM role's name>
 ```
