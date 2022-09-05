@@ -36,6 +36,10 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 >
 > https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html
 
+```
+$ curl http://169.254.169.254/latest/iam/security-credentials/<Your own IAM role's name>
+```
+
 # 1-2. Switch role
 In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
  > https://www.youtube.com/watch?v=d7R08uPS98M
