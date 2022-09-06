@@ -182,8 +182,19 @@ catch (Exception e)
     string errorText = String.Format("{0} \n\n{1}", e.Message, e.InnerException != null ? e.InnerException.Message : "Acquire token failed");
 }
 ```
-See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
-
+See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token<br>
+The Json structure of the response of metadata service in Azure is here. The above C# code picks up Bearer code through a dictionary of "access_token".
+```
+{
+  "access_token": "eyJ0eXAi...",
+  "refresh_token": "",
+  "expires_in": "3599",
+  "expires_on": "1506484173",
+  "not_before": "1506480273",
+  "resource": "https://management.azure.com/",
+  "token_type": "Bearer"
+}
+```
 
 # 2-3-1. Difference between System-assigned and User-assigned Managed ID
 
