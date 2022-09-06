@@ -40,6 +40,15 @@ IAM role is a good solution for it. When you want to create the EC2 instance whi
 You can retrieve some secrets directly from the metadata service in your EC2 instance through 169.254.169.254.
 ```
 $ curl http://169.254.169.254/latest/iam/security-credentials/<Your own IAM role's name>
+{
+  "Code" : "Success",
+  "LastUpdated" : "2020-06-11T10:14:39Z",
+  "Type" : "...",
+  "AccessKeyId" : "...",
+  "SecretAccessKey" : "...",
+  "Token" : "...",
+  "Expiration" : "2020-06-11T16:34:27Z"
+}
 ```
 
 # 1-2. Switch role
