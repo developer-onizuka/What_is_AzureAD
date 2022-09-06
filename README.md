@@ -182,7 +182,7 @@ catch (Exception e)
     string errorText = String.Format("{0} \n\n{1}", e.Message, e.InnerException != null ? e.InnerException.Message : "Acquire token failed");
 }
 ```
-See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token<br>
+See also https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token .<br>
 The Json structure of the response of metadata service in Azure is here. The above C# code picks up Bearer code through a dictionary of "access_token".
 ```
 {
