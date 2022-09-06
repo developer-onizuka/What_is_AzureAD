@@ -153,6 +153,7 @@ You might create the role which allows to access the blob storage in mystorageac
 
 Get a token by using C#
 ---
+https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-to-use-vm-token
 ```
 using System;
 using System.Collections.Generic;
