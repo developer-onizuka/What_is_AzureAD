@@ -209,7 +209,7 @@ The Json structure of the response of metadata service in Azure is here. The abo
 | How to use properly | for Small systems | for Large systems |  
 
 # 2-3-2. Access with Managed ID between Azure subscriptions
-[Access with Managed ID between Azure subscriptions which each belongs to the same Azure AD tenant](https://stackoverflow.com/questions/59069065/can-managed-identity-of-a-azure-function-have-access-across-multiple-subscriptio). (But [Managed IDs don't currently support cross-tenant scenarios.](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant)) <br>
+[Access with Managed ID between Azure subscriptions which each belongs to the same Azure AD tenant](https://stackoverflow.com/questions/59069065/can-managed-identity-of-a-azure-function-have-access-across-multiple-subscriptio). <br> But [Managed IDs don't currently support cross-tenant scenarios.](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant) <br>
 
 ![ManagedID_Between_Subscription.drawio.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/ManagedID_Between_Subscription.drawio.png)
 
