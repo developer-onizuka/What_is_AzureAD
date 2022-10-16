@@ -74,14 +74,14 @@ The goal of this video above is the table below:
 - **Edit Trust Relationship** in AWS account: 46017xxxxxxx (Prod).
 ```
 {
-  "Version": "2012-10-17",
-  "Statement": [
+  "Version" : "2012-10-17",
+  "Statement" : [
     {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::36989xxxxxxx:root" --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
+      "Effect" : "Allow",
+      "Principal" : {
+        "AWS" : "arn:aws:iam::36989xxxxxxx:root" --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
       },
-      "Action": "sts:AssumeRole",
+      "Action" : "sts:AssumeRole",
       "Condition" : {}
     }
 }
