@@ -71,7 +71,7 @@ The goal of this video above is the table below:
 - **AssumeRole API gives them temporary security credential which allows them to act as if they have the role** (CrossAccount-AppsProds or CrossAccount-AppsDevs).
 - Trust relationship in AWS account of Prod (46017xxxxxxx) should be used so that the account can accept the only AWS user who already has the trust relationship. 
 - "arn:aws:iam::36989xxxxxxx:root" means AWS account itself and all of user in the AWS account 36989xxxxxxx is acceptable. You should use "arn:aws:iam::36989xxxxxxx:/user/Vipin" instead of it. 
-- **Edit Trust Relationship** in AWS account: 46017xxxxxxx (Prod), so that **only Vipin** can switch the role of CrossAccount-AppsProds.
+- **Edit Trust Relationship** in AWS account: 46017xxxxxxx (Prod), so that **only Vipin** can switch the role to CrossAccount-AppsProds.
 ```
 {
   "Version" : "2012-10-17",
