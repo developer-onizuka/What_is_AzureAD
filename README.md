@@ -79,7 +79,8 @@ The goal of this video above is the table below:
     {
       "Effect" : "Allow",
       "Principal" : {
-        "AWS" : "arn:aws:iam::36989xxxxxxx:root" --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
+        "AWS" : "arn:aws:iam::36989xxxxxxx:root"
+            --> "arn:aws:iam::36989xxxxxxx:/user/Vipin"
       },
       "Action" : "sts:AssumeRole",
       "Condition" : {}
