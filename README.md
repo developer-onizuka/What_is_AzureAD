@@ -9,7 +9,7 @@
 Yes, Azure AD remains if subscription expires.
 
 <br>
-![azure-aws-integration.png](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/aws/media/azure-aws-integration.png)
+![azure-aws-integration.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-aws-integration.png)
 <br>
 
 The followings are steps to attach policys to each user and role in AWS and Azure based on each clould's way of thinking.
