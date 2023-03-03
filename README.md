@@ -89,6 +89,7 @@ The goal of this video above is the table below:
       "Action" : "sts:AssumeRole",
       "Condition" : {}
     }
+  ]
 }
 ``` 
 - You should use the External ID in addition to above if you use "arn:aws:iam::36989xxxxxxx:root" which is available for everyone to assume a role. **(the confused deputy problem)**
