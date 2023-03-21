@@ -146,8 +146,7 @@ Subscription is a logical container that Microsoft uses to maintain their billin
 > https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps
 
 # 2-3. Managed ID
-Manage ID is a locally running internal endpoint (http://169.254.169.254/metadata/identity/oauth2/token) which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. **Your code just send a token request with no credentials to this endpoint.** The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside because platform manages the credentials. So, it is very secure.<br>
-A storage account is nothing but an account having a right permission to do something about storage resources. For example, you may add a role on Managed ID in the storage account's Access Control(IAM) menu so that VMs with Managed ID can get reading files in the blob storage.
+Manage ID is a locally running internal endpoint (http://169.254.169.254/metadata/identity/oauth2/token) which resides in virtual machine. This endpoint is a micro web service running on that virtual machine. And it is only acceptable from within that virtual machine. So on your locally running code can actually request tokens from it. **Your code just send a token request with no credentials to this endpoint.** The life cycle of Managed ID is tied to that resouce so if you delete that virtual machine the ID will be also deleted. You don't need to put credentials on your code inside because platform manages the credentials. So, it is very secure.
 
 ![azure-ManagedID.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ManagedID.png)
 
@@ -220,6 +219,8 @@ The Json structure of the response of metadata service in Azure is here. The abo
 | How to use properly | for Small systems | for Large systems |  
 
 # 2-3-2. Access with Managed ID between Azure subscriptions
+A storage account is nothing but an account having a right permission to do something about storage resources. For example, you may add a role on Managed ID in the storage account's Access Control(IAM) menu so that VMs with Managed ID can get reading files in the blob storage.<br>
+
 - [VMs with Managed ID can access the storage account in the different subscription which each belongs to the same Azure AD tenant.](https://stackoverflow.com/questions/59069065/can-managed-identity-of-a-azure-function-have-access-across-multiple-subscriptio) <br> 
 - [Managed IDs don't currently support cross-tenant scenarios.](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant) <br>
 
