@@ -24,7 +24,7 @@ The followings are steps to attach policys to each user and role in AWS and Azur
 For example, if you create a policy called "AmazonS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. 
 
 # 1-2. IAM role
-IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
+If you want to create the EC2 instance which sends Emails with AWS SES, IAM role is a good solution for it.
 - Create the IAM role (role type should be "Amazon EC2 role")
 - Attach the access grant of "AmazonSESFullAccess" to it.
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
