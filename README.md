@@ -32,7 +32,7 @@ Default output format [None]: text
 ```
 
 # 1-2. IAM role
-If you want to create the EC2 instance which sends Emails with AWS SES, IAM role is a good solution for it instead of IAM User's Access Key. But you don't forget to write the programs to be aware of ec2metadata, see also [here](https://aws.amazon.com/jp/blogs/developer/ec2metadata/)<br>
+If you want to create the EC2 instance which sends Emails with AWS SES, IAM role is a good solution for it instead of IAM User's Access Key. But you don't forget to write the programs to be aware of ec2metadata, see also [here](https://aws.amazon.com/jp/blogs/developer/ec2metadata/).<br>
 - Create the IAM role (role type should be "Amazon EC2 role")
 - Attach the access grant of "AmazonSESFullAccess" to it.
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
