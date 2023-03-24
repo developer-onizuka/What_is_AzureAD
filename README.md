@@ -36,7 +36,7 @@ If you want to create the EC2 instance which sends Emails with AWS SES, IAM role
 - Create the IAM role (role type should be "Amazon EC2 role")
 - Attach the access grant of "AmazonSESFullAccess" to it.
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
-- Run the programs with AWS SES on the EC2 instance. (See also #1-1 about how IAM role works inside of EC2 instance.)
+- Run the programs with AWS SES on the EC2 instance. (See also #1-4 about how IAM role works inside of EC2 instance.)
 
 # 1-3. Difference between IAM User's Access Key and IAM role
 |  | Possibility of leaking | Impact |
