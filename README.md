@@ -14,7 +14,8 @@ Yes, Azure AD remains if subscription expires.
 
 The followings are steps to attach policys to each user and role in AWS and Azure based on each clould's way of thinking.
 ---
-# 1. AWS IAM
+# 1. Difference between AWS IAM User and IAM role
+# 1-1. IAM User
 - Step1: Getting AWS account (root user), But it is not recommended to use at creating AWS resouces.
 - Step2: Create IAM user instead of using the AWS root account, But it is not recommended to share among coworkers.
 - Step3: Create IAM policy which can access the services you want to use. 
@@ -22,13 +23,14 @@ The followings are steps to attach policys to each user and role in AWS and Azur
 
 For example, if you create a policy called "AmazonS3FullAccess" that grants all operations to S3 (of the AWS storage service) and attach it to the IAM user Bob, Bob will do everything to S3. 
 
+# 1-2. IAM role
 IAM role is a good solution for it. When you want to create the EC2 instance which sends Emails with AWS SES, then
 - Create the IAM role (role type should be "Amazon EC2 role")
 - Attach the access grant of "AmazonSESFullAccess" to it.
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
 - Run the programs with AWS SES on the EC2 instance. (See also #1-1 about how IAM role works inside of EC2 instance.)
 
-# 1-1. Difference between Access Key and IAM role
+# 1-3. IAM User's Access Key
 |  | Possibility of leaking | Impact |
 | :--- | :--- | :--- |
 | IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
