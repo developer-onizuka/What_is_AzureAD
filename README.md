@@ -39,13 +39,18 @@ If you want to create the EC2 instance which sends Emails with AWS SES, IAM role
 - Attach the role to the EC2 instance you created. But note that it is not possible to attach it to existed Instances. Then, you might recreate instance again.
 - Run the programs with AWS SES on the EC2 instance. (See also [#1-4](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/README.md#1-4-how-to-retrieve-security-credentials-from-ec2-instance) about how IAM role works inside of EC2 instance.)
 
-# 1-3. Difference between IAM User's Access Key and IAM role
+# 1-3. Service role
+A service role is an IAM role that a service assumes to perform actions on your behalf. An IAM administrator can create, modify, and delete a service role from within IAM. For more information, see Creating a role to delegate permissions to an AWS service in the IAM User Guide.<br>
+AWS service role is limited to the services in the IAM role written above, and can be identified as a service role by the ARN path.
+> https://qiita.com/yuta-katayama-23/items/0606e8d590968e43fd27
+
+# 1-4. Difference between IAM User's Access Key and IAM role
 |  | Possibility of leaking | Impact |
 | :--- | :--- | :--- |
 | IAM User's Access Key | Hard coded usernames, passwords, tokens and other secrets in the source code. | If leaked, it can be used by anyone who obtains it, which can potentially compromise your AWS resources and Account itself. An AWS access key is an authentication key created to authenticate programmatic access to AWS services such as S3 and EC2. So, anyone who obtains it can create resources such as EC2 instances if the access key has another grants such as "ec2:RunInstances". |
 | IAM role | No | -<br> (But you can't use IAM role on your onprem servers to access AWS resources, because only AWS instance such as EC2 can have a provider that manages the temporary security credentials transparently (See also [#1-4](https://github.com/developer-onizuka/What_is_AzureAD#1-4-how-to-retrieve-security-credentials-from-ec2-instance)). The way to access from outside is only to use IAM User's Access key. But you might use switch role instead of using Access key bound for each IAM user, directly. See also [#1-5](https://github.com/developer-onizuka/What_is_AzureAD#1-5-switch-role) about Switch role.) |
 
-# 1-4. How to retrieve security credentials from EC2 instance
+# 1-5. How to retrieve security credentials from EC2 instance
 ![IAM-Role.png](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/IAM-Role.png)
 
 > https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#instance-metadata-security-credentials
@@ -67,7 +72,7 @@ $ curl http://169.254.169.254/latest/iam/security-credentials/<Your own IAM role
 }
 ```
 
-# 1-5. Switch role
+# 1-6. Switch role
 In the case of AWS, it is common to create an AWS account that stores only IAM users separately from the AWS account that holds resources, and assign permissions from the AWS account that holds resources. See the URL below, so that you can understand how to switch the role between AWS account that stores only IAM users and IAM role in the AWS account that holds resources.
  > https://www.youtube.com/watch?v=d7R08uPS98M
  > 
