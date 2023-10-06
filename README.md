@@ -40,8 +40,9 @@ If you want to create the EC2 instance which sends Emails with AWS SES, IAM role
 - Run the programs with AWS SES on the EC2 instance. (See also [#1-5](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/README.md#1-4-how-to-retrieve-security-credentials-from-ec2-instance) about how IAM role works inside of EC2 instance.)
 
 # 1-3. Service role
-A service role is an IAM role that a service assumes to perform actions on your behalf. An IAM administrator can create, modify, and delete a service role from within IAM. For more information, see Creating a role to delegate permissions to an AWS service in the IAM User Guide.<br>
+A service role is an IAM role that a service assumes to perform actions on your behalf. An IAM administrator can create, modify, and delete a service role from within IAM. For more information, see [Creating a role to delegate permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the IAM User Guide.<br>
 A service role is limited to the services in the IAM role written above, and can be identified as a service role by the ARN path.
+When a role serves a specialized purpose for a service, it is categorized as [a service role for EC2 instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-role-ec2) (for example), or a service-linked role. To see what services support using service-linked roles, or whether a service supports any form of temporary credentials, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html). 
 > https://qiita.com/yuta-katayama-23/items/0606e8d590968e43fd27
 
 # 1-4. Difference between IAM User's Access Key and IAM role
