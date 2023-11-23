@@ -263,7 +263,7 @@ The most secure and convenient way to handle authentication within Azure is to u
 
 > https://github.com/developer-onizuka/OAuth2.0_Authorization
 
-![azure-ad2.jpg](https://github.com/developer-onizuka/What_is_AzureAD/blob/main/azure-ad2.jpg)
+![ServicePrincipal.drawio.png](https://github.com/developer-onizuka/Diagrams/blob/main/What_is_AzureAD/ServicePrincipal.drawio.png)
 
 
 # Refferences:
