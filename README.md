@@ -237,7 +237,7 @@ The Json structure of the response of metadata service in Azure is here. The abo
 | How to use properly | for Small systems | for Large systems |  
 
 # 2-3-2. Access with Managed ID between Azure subscriptions
-A storage account is nothing but an account having a right permission to do something about storage resources. For example, you may add a role on Managed ID in the storage account's Access Control(IAM) menu so that VMs with Managed ID can get reading files in the blob storage.<br>
+A storage account is nothing but an account having a right permission to do something about storage resources. For example, you may add a role on Managed ID in the storage account's Access Control (IAM) menu so that VMs with Managed ID can get reading files in the blob storage.<br>
 
 - [VMs with Managed ID can access the storage account in the different subscription which each belongs to the same Azure AD tenant.](https://stackoverflow.com/questions/59069065/can-managed-identity-of-a-azure-function-have-access-across-multiple-subscriptio) <br> 
 - [Managed IDs don't currently support cross-tenant scenarios.](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/managed-identities-faq#can-i-use-a-managed-identity-to-access-a-resource-in-a-different-directorytenant) <br>
