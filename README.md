@@ -1,6 +1,6 @@
 # What is the difference between AWS IAM and Azure AD ?
 
- AWS IAM can be classified as a tool in the "Cloud Access Management" category, while Azure Active Directory is grouped under "Password Management".
+ AWS IAM can be classified as a tool in the "Resource Management" category, while Azure Active Directory is grouped under "Identity Management".
  
  For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. 
 
