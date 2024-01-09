@@ -2,7 +2,7 @@
 
  AWS IAM can be classified as a tool in the "Resource Management" category, while Azure Active Directory is grouped under "Identity Management".
  
- For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. 
+ For AWS, users are managed within their AWS account, while for Azure, users are managed outside of the subscription. AWS Organization can provide with Landing Zone which you can use SSO to each AWS account.
 
  In Azure, on the other hand, it's the Azure Active Directory that manages users, so you need to associate a subscription with it (you don't need to get a separate subscription to manage users). 
  
